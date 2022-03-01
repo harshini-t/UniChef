@@ -7,7 +7,11 @@ import { Text, View } from '../components/Themed';
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <Text style={styles.title}>Profile</Text>
+      <Text style={styles.title}>Kirby</Text>
+      <Text style={styles.title}>@kirby</Text>
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/SSU_Kirby_artwork.png" alt="Kirby" 
+      width="200" height="250"></img>{"\n"} {"\n"}
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
     </View>
