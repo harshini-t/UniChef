@@ -13,6 +13,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       Cook time: 30 minutes{"\n"}
       <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
       width="100" height="150"></img>{"\n"} {"\n"}
+
       <Text style={styles.collapsible}>Directions</Text>
       </p></Text>
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
