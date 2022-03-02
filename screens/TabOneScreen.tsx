@@ -14,32 +14,71 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
     <ScrollView style={styles.container}>
       <View style={styles.header}>
       <Text style={styles.title}>UniChefs</Text>
-      
-       
-      <View style={styles.container}>
+      </View>
+        <View style={styles.RectangleShapeView}>
+        <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}
+      Cook time: 30 minutes{"\n"}
+      <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
+      width="250" height="300"></img>
+
       {"\n"}
       {"\n"}
-        <View style={styles.SquareShapeView} />
- 
-        <View style={styles.RectangleShapeView} />
 
-        <View style={styles.RectangleShapeView} />
-
-        <View style={styles.RectangleShapeView} />
-        
+      <Text style={styles.collapsible}>Directions</Text>
         </View>
-      
-        {"\n"}
+
+        <View style={styles.RectangleShapeView}>
+        <Text style={styles.name}> Grilled Cheese </Text> {"\n"}
+      Cook time: 5 minutes{"\n"}
+      <img src="https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg" alt="Veggie Fried Rice" 
+      width="250" height="300"></img>
+
       {"\n"}
+      {"\n"}
+
+      <Text style={styles.collapsible}>Directions</Text>
+        </View>
+
+      
+        <View style={styles.RectangleShapeView}>
+        <Text style={styles.name}> Teriyaki Stir Fry </Text> {"\n"}
+        Cook time: 40 minutes{"\n"}
+        <img src="https://www.connoisseurusveg.com/wp-content/uploads/2018/12/teriyaki-tofu-5-of-5.jpg" alt="Veggie Fried Rice" 
+        width="250" height="300"></img>
+
+        {"\n"}
+        {"\n"}
+
+      <Text style={styles.collapsible}>Directions</Text>
+        </View>
+
+        <View style={styles.RectangleShapeView}>
+        <Text style={styles.name}> Fetuccine Alfredo Pasta </Text> {"\n"}
+        Cook time: 25 minutes{"\n"}
+        <img src="https://www.seannaskitchen.com/wp-content/uploads/2021/11/Alfredo-Hero-2-1.jpg" alt="Veggie Fried Rice" 
+        width="250" height="300"></img>
+
+        {"\n"}
+        {"\n"}
+
+      <Text style={styles.collapsible}>Directions</Text>
+        </View>
+
+
+
+        
 
       {/* <Text style={styles.card}>
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}
       Cook time: 30 minutes{"\n"}
       <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
-      width="100" height="150"></img>{"\n"} */} {"\n"}
-      <Text style={styles.collapsible}>Directions</Text>
+      width="100" height="150"></img>{"\n"} */} 
+      
+      {"\n"}
+      {"\n"}
+      
+      
       {/* </Text> */}
-      </View>
     </ScrollView>
   );
 }
@@ -47,14 +86,15 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F5FCFF',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
 
   title: {
     marginTop: 100,
-    fontSize: 20,
+    fontSize: 50,
     fontWeight: 'bold',
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    justifyContent: 'center'
   },
   separator: {
     marginVertical: 30,
@@ -75,18 +115,19 @@ const styles = StyleSheet.create({
 
   collapsible: {
     marginTop: 10,
-    backgroundColor: "#DC143C",
-    color: "#000000",
+    backgroundColor: "#301934",
+    color: "#FFFFFF",
     cursor: "pointer",
-    paddingHorizontal: 50,
+    paddingHorizontal: 70,
     fontSize: 15,
     outline: "none",
+    fontWeight: 'bold',
 
   },
   
   header:{
     backgroundColor: "#00008b",
-    height:200,
+    height: 180,
   },
 
   body:{
@@ -134,7 +175,6 @@ const styles = StyleSheet.create({
  
     width: 200,
     height: 200,
-    justifyContent: 'center',
     backgroundColor: '#00BCD4'
  
   },
@@ -142,10 +182,10 @@ const styles = StyleSheet.create({
   RectangleShapeView: {
  
     marginTop: 20,
-    width: 120 * 2,
-    height: 120,
-    justifyContent: 'center',
-    backgroundColor: '#FFC107'
+    width: 400 * 2,
+    height: 400,
+    alignItems: 'center',
+    backgroundColor: '#E6E6FA'
  
   }
   
