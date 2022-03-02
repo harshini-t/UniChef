@@ -1,31 +1,49 @@
-import * as React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet,
   Text,
   View,
   Image,
-  TouchableOpacity, ScrollView} from 'react-native';
+  TouchableOpacity, 
+  ScrollView,
+  LayoutAnimation,
+  Platform, UIManager, Button, Alert} from 'react-native';
+import {ExpandableListView} from 'react-native-expandable-listview';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 //import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+/*   function YourComponent() {
+    function handleItemClick({index}) {
+      console.log(index);
+    };
+  
+    function handleInnerItemClick({innerIndex, item, itemIndex}) {
+      console.log(innerIndex);
+    };
+  } */
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
       <Text style={styles.title}>UniChefs</Text>
       </View>
         <View style={styles.RectangleShapeView}>
-        <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}
+        <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       Cook time: 30 minutes{"\n"}
       <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
       width="250" height="300"></img>
+      
 
-      {"\n"}
-      {"\n"}
+      <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Directions</Text>
+                onPress={() => Alert.alert('Simple Button pressed')}
+              </TouchableOpacity>  
 
-      <Text style={styles.collapsible}>Directions</Text>
-        </View>
+              {"\n"}
+              {"\n"}
+        </View>        
 
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Grilled Cheese </Text> {"\n"}
@@ -156,7 +174,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    marginTop:10,
+    marginTop: 10,
     height:45,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -182,8 +200,8 @@ const styles = StyleSheet.create({
   RectangleShapeView: {
  
     marginTop: 20,
-    width: 400 * 2,
-    height: 400,
+    width: 450 * 2,
+    height: 450,
     alignItems: 'center',
     backgroundColor: '#E6E6FA'
  

@@ -4,14 +4,15 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 
 export default class Profile extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
           <View style={styles.header}></View>
           <Image style={styles.profile} source={{uri: 'https://upload.wikimedia.org/wikipedia/en/2/2d/SSU_Kirby_artwork.png'}}/>
           <View style={styles.body}>
@@ -29,7 +30,7 @@ export default class Profile extends Component {
               </TouchableOpacity>
             </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
