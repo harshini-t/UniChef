@@ -7,8 +7,10 @@ import { Text, View } from '../components/Themed';
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <View style={styles.header}>
       <Text style={styles.title}>Marketplace</Text>
+      </View>
       <View style={styles.wrapper}>
             <View>
                 <View style={{flexDirection:"row"}}>
@@ -25,26 +27,28 @@ export default function TabTwoScreen() {
       width="400" height="250" style={{justifyContent: 'flex-start',}}></img>{"\n"} {"\n"}
                     </View>
                 </View>
-            </View>
+         
 
+      </View>
       </View>
       
       
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#F5FCFF',
   },
   title: {
-    fontSize: 20,
+    marginTop: 100,
+    fontSize: 50,
     fontWeight: 'bold',
+    color: '#FFFFFF',
+    justifyContent: 'center'
   },
   separator: {
     marginVertical: 30,
@@ -54,5 +58,10 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: 10,
     backgroundColor: '#FFFFFF'
+},
+
+header:{
+  backgroundColor: "#00008b",
+  height: 180,
 }
 });
