@@ -38,7 +38,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
       <TouchableOpacity style={styles.buttonContainer}>
                 <Text style={styles.appButtonText}>Directions</Text>
-                onPress={() => Alert.alert('Simple Button pressed')}
+                {() => Alert.alert('Simple Button pressed')}
               </TouchableOpacity>  
 
               {"\n"}
