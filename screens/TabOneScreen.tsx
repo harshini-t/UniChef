@@ -13,6 +13,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 //import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
+
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
 /*   function YourComponent() {
     function handleItemClick({index}) {
@@ -31,15 +32,30 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       </View>
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
-      Cook time: 30 minutes{"\n"}
+      <Text style={styles.general}> Cook time: 30 minutes </Text>{"\n"}
       <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
       width="250" height="300"></img>
+
+{"\n"}
+              {"\n"}
+
+<TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Directions</Text>
+<<<<<<< HEAD
+                {() => Alert.alert('Simple Button pressed')}
+=======
+>>>>>>> 4455fa785d5f3741f990ba2a89a0ad19ff0a4622
+              </TouchableOpacity>  
+
+              {"\n"}
+              {"\n"}
+
+              <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Reviews</Text>
+              </TouchableOpacity>  
       
 
-      <TouchableOpacity style={styles.buttonContainer}>
-                <Text style={styles.appButtonText}>Directions</Text>
-                {() => Alert.alert('Simple Button pressed')}
-              </TouchableOpacity>  
+      
 
               {"\n"}
               {"\n"}
@@ -47,39 +63,84 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Grilled Cheese </Text> {"\n"}
-      Cook time: 5 minutes{"\n"}
+      <Text style={styles.general}> Cook time: 5 minutes </Text>{"\n"}
       <img src="https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg" alt="Veggie Fried Rice" 
       width="250" height="300"></img>
 
       {"\n"}
       {"\n"}
 
-      <Text style={styles.collapsible}>Directions</Text>
+<TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Directions</Text>
+              </TouchableOpacity>  
+
+              {"\n"}
+              {"\n"}
+
+              <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Reviews</Text>
+              </TouchableOpacity>  
+      
+
+      
+
+              {"\n"}
+              {"\n"}
         </View>
 
       
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Teriyaki Stir Fry </Text> {"\n"}
-        Cook time: 40 minutes{"\n"}
+        <Text style={styles.general}> Cook time: 40 minutes </Text>{"\n"}
         <img src="https://www.connoisseurusveg.com/wp-content/uploads/2018/12/teriyaki-tofu-5-of-5.jpg" alt="Veggie Fried Rice" 
         width="250" height="300"></img>
 
         {"\n"}
         {"\n"}
 
-      <Text style={styles.collapsible}>Directions</Text>
+        <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Directions</Text>
+              </TouchableOpacity>  
+
+              {"\n"}
+              {"\n"}
+
+              <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Reviews</Text>
+              </TouchableOpacity>  
+      
+
+      
+
+              {"\n"}
+              {"\n"}
         </View>
 
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Fetuccine Alfredo Pasta </Text> {"\n"}
-        Cook time: 25 minutes{"\n"}
+        <Text style={styles.general}> Cook time: 25 minutes </Text>{"\n"}
         <img src="https://www.seannaskitchen.com/wp-content/uploads/2021/11/Alfredo-Hero-2-1.jpg" alt="Veggie Fried Rice" 
         width="250" height="300"></img>
 
         {"\n"}
         {"\n"}
 
-      <Text style={styles.collapsible}>Directions</Text>
+        <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Directions</Text>
+              </TouchableOpacity>  
+
+              {"\n"}
+              {"\n"}
+
+              <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.appButtonText}>Reviews</Text>
+              </TouchableOpacity>  
+      
+
+      
+
+              {"\n"}
+              {"\n"}
         </View>
 
 
@@ -101,10 +162,11 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
   );
 }
 
+
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#F5FCFF',
-    flexDirection: 'column',
   },
 
   title: {
@@ -141,6 +203,11 @@ const styles = StyleSheet.create({
     outline: "none",
     fontWeight: 'bold',
 
+  },
+
+  general: {
+    fontSize: 12,
+    fontWeight: "300",
   },
   
   header:{
@@ -200,8 +267,8 @@ const styles = StyleSheet.create({
   RectangleShapeView: {
  
     marginTop: 20,
-    width: 450 * 2,
-    height: 450,
+    width: 400,
+    height: 500,
     alignItems: 'center',
     backgroundColor: '#E6E6FA'
  
