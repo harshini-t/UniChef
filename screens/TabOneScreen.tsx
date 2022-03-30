@@ -33,8 +33,8 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text>{"\n"}
-      <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
-      width="250" height="300"></img>
+        <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
+       className = "center" width="250" height="300"></img>
 
 {"\n"}
               {"\n"}
@@ -49,7 +49,10 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
               {"\n"}
               {"\n"}
 
-              <TouchableOpacity style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.buttonContainer}
+                onPress={() => navigation.navigate('VeggieFriedRiceReviews')}
+                >
+
                 <Text style={styles.appButtonText}>Reviews</Text>
               </TouchableOpacity>  
       
@@ -164,10 +167,6 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#F5FCFF',
-  },
-
   title: {
     marginTop: 100,
     fontSize: 50,
@@ -205,8 +204,9 @@ const styles = StyleSheet.create({
   },
 
   general: {
-    fontSize: 12,
+    fontSize: 20,
     fontWeight: "300",
+    alignSelf: 'center'
   },
   
   header:{
@@ -225,7 +225,8 @@ const styles = StyleSheet.create({
   name:{
     fontSize:28,
     color: "#00008b",
-    fontWeight: "600"
+    fontWeight: "600",
+    alignSelf: 'center'
   },
   info:{
     fontSize:16,
@@ -244,7 +245,7 @@ const styles = StyleSheet.create({
     height:45,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignSelf: 'center',
     marginBottom:20,
     width:250,
     borderRadius:30,
@@ -253,6 +254,7 @@ const styles = StyleSheet.create({
   appButtonText: {
     fontSize: 14,
     color: "#ffffff",
+    alignSelf: 'center'
   },
 
   SquareShapeView: {
@@ -266,10 +268,10 @@ const styles = StyleSheet.create({
   RectangleShapeView: {
  
     marginTop: 20,
-    width: 400,
+    width: 500,
     height: 500,
-    alignItems: 'center',
-    backgroundColor: '#E6E6FA'
+    alignSelf: 'center',
+    backgroundColor: '#CCCCFF'
  
   }
   
