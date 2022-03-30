@@ -41,10 +41,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
 <TouchableOpacity style={styles.buttonContainer}>
                 <Text style={styles.appButtonText}>Directions</Text>
-<<<<<<< HEAD
-                {() => Alert.alert('Simple Button pressed')}
-=======
->>>>>>> 4455fa785d5f3741f990ba2a89a0ad19ff0a4622
+                onPress={() => navigation.navigate('TabTwo')}
               </TouchableOpacity>  
 
               {"\n"}
