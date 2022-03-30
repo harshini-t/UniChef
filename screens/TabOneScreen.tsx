@@ -39,9 +39,11 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 {"\n"}
               {"\n"}
 
-<TouchableOpacity style={styles.buttonContainer}>
+<TouchableOpacity style={styles.buttonContainer}
+                onPress={() => navigation.navigate('VeggieFriedRice')}
+                >
+
                 <Text style={styles.appButtonText}>Directions</Text>
-                onPress={() => navigation.navigate('TabTwo')}
               </TouchableOpacity>  
 
               {"\n"}
