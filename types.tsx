@@ -19,6 +19,8 @@ export type RootStackParamList = {
   NotFound: undefined;
   VeggieFriedRice: undefined;
   VeggieFriedRiceReviews: undefined;
+  KirbyMealsForSale: undefined;
+  KirbyRecipes: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

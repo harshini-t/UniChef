@@ -5,7 +5,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 
-export default function VeggieFriedRiceScreen() {
+export default function VeggieFriedRiceReviewsScreen() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>

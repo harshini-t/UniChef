@@ -20,6 +20,8 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import TabThreeScreen from '../screens/TabThreeScreen';
 import VeggieFriedRiceScreen from '../screens/VeggieFriedRiceScreen';
 import VeggieFriedRiceReviewsScreen from '../screens/VeggieFriedRiceReviewsScreen';
+import KirbyMealsForSaleScreen from '../screens/KirbyMealsForSaleScreen';
+import KirbyRecipesScreen from '../screens/KirbyRecipesScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -46,6 +48,8 @@ function RootNavigator() {
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Screen name="VeggieFriedRice" component={VeggieFriedRiceScreen} />
       <Stack.Screen name="VeggieFriedRiceReviews" component={VeggieFriedRiceReviewsScreen} />
+      <Stack.Screen name="KirbyMealsForSale" component={KirbyMealsForSaleScreen} />
+      <Stack.Screen name="KirbyRecipes" component={KirbyRecipesScreen} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>

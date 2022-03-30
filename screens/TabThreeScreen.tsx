@@ -1,39 +1,61 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
+import React, {Component} from 'react';
+import { StyleSheet,
   Text,
   View,
   Image,
-  TouchableOpacity,
-  ScrollView
-} from 'react-native';
+  TouchableOpacity, 
+  ScrollView,
+  LayoutAnimation,
+  Platform, UIManager, Button, Alert} from 'react-native';
+import {ExpandableListView} from 'react-native-expandable-listview';
 
-export default class Profile extends Component {
+import EditScreenInfo from '../components/EditScreenInfo';
+//import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
 
-  render() {
-    return (
-      <ScrollView style={styles.container}>
-          <View style={styles.header}></View>
-          <Image style={styles.profile} source={{uri: 'https://upload.wikimedia.org/wikipedia/en/2/2d/SSU_Kirby_artwork.png'}}/>
-          <View style={styles.body}>
-            <View style={styles.bodyContent}>
-              <Text style={styles.name}>Kirby</Text>
-              <Text style={styles.info}>@kirbyeats</Text>
-              <Text style={styles.info}>10k Followers / 100 Following / 2 Posts</Text>
-              <Text style={styles.bio}> Hi! I'm from Taiwan and I love eating and cooking Asian food. Check out my recipes!</Text>
-              
-              <TouchableOpacity style={styles.buttonContainer}>
-                <Text style={styles.appButtonText}>Recipes</Text>
-              </TouchableOpacity>              
-              <TouchableOpacity style={styles.buttonContainer}>
-                <Text style={styles.appButtonText}>Meals for Sale</Text>
-              </TouchableOpacity>
-            </View>
-        </View>
-      </ScrollView>
-    );
-  }
+
+export default function TabThreeScreen({ navigation }: RootTabScreenProps<'TabThree'>) {
+/*   function YourComponent() {
+    function handleItemClick({index}) {
+      console.log(index);
+    };
+  
+    function handleInnerItemClick({innerIndex, item, itemIndex}) {
+      console.log(innerIndex);
+    };
+  } */
+
+  return (
+    <ScrollView style={styles.container}>
+    <View style={styles.header}></View>
+    <Image style={styles.profile} source={{uri: 'https://upload.wikimedia.org/wikipedia/en/2/2d/SSU_Kirby_artwork.png'}}/>
+    <View style={styles.body}>
+      <View style={styles.bodyContent}>
+        <Text style={styles.name}>Kirby</Text>
+        <Text style={styles.info}>@kirbyeats</Text>
+        <Text style={styles.info}>10k Followers / 100 Following / 2 Posts</Text>
+        <Text style={styles.bio}> Hi! I'm from Taiwan and I love eating and cooking Asian food. Check out my recipes!</Text>
+        
+        <TouchableOpacity style={styles.buttonContainer}
+          onPress={() => navigation.navigate('KirbyRecipes')}
+          >
+          <Text style={styles.appButtonText}>Recipes</Text>
+        </TouchableOpacity> 
+
+        <TouchableOpacity style={styles.buttonContainer}
+          onPress={() => navigation.navigate('KirbyMealsForSale')}
+          >
+          <Text style={styles.appButtonText}>Meals for Sale</Text>
+        </TouchableOpacity> 
+
+      </View>
+  </View>
+</ScrollView>
+
+  );
 }
+
+
 
 const styles = StyleSheet.create({
   header:{
