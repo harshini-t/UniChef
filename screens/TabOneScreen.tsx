@@ -34,7 +34,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text>{"\n"}
         <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
-       className = "center" width="250" height="300"></img>
+       className = "center" width="250" height="300" className="center"></img>
 
 {"\n"}
               {"\n"}
@@ -67,7 +67,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <Text style={styles.name}> Grilled Cheese </Text> {"\n"}
       <Text style={styles.general}> Cook time: 5 minutes </Text>{"\n"}
       <img src="https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg" alt="Veggie Fried Rice" 
-      width="250" height="300"></img>
+      width="250" height="300" className="center"></img>
 
       {"\n"}
       {"\n"}
@@ -95,7 +95,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <Text style={styles.name}> Teriyaki Stir Fry </Text> {"\n"}
         <Text style={styles.general}> Cook time: 40 minutes </Text>{"\n"}
         <img src="https://www.connoisseurusveg.com/wp-content/uploads/2018/12/teriyaki-tofu-5-of-5.jpg" alt="Veggie Fried Rice" 
-        width="250" height="300"></img>
+        width="250" height="300" className="center"></img>
 
         {"\n"}
         {"\n"}
@@ -144,7 +144,6 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
               {"\n"}
               {"\n"}
         </View>
-
 
 
         
