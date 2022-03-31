@@ -41,6 +41,9 @@ export default function KirbyMealsForSaleScreen() {
                 <Text style={styles.appButtonText}>Add to Cart</Text>
         </TouchableOpacity>
       </View>
+      <TouchableOpacity style={styles.buttonContainer2}>
+                <Text style={styles.appButtonText}>Create New Meal</Text>
+              </TouchableOpacity> 
     </View>
       
       
@@ -93,7 +96,7 @@ RectangleShapeView: {
  
     marginTop: 20,
     width: 800,
-    height: 1250,
+    height: 1300,
     alignSelf: 'center',
     backgroundColor: '#E6E6FA'
  
@@ -137,6 +140,20 @@ RectangleShapeView: {
     borderRadius:30,
     backgroundColor: "#00008b",
   },
+
+  buttonContainer2: {
+    marginTop:10,
+    height:45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:20,
+    width:250,
+    borderRadius:30,
+    alignSelf: 'center',
+    backgroundColor: "#EE4B2B",
+  },
+
   appButtonText: {
     fontSize: 14,
     color: "#ffffff",
